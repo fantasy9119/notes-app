@@ -12,7 +12,7 @@
 
 const event = {
     name: 'Birthday Party',
-    guestList: ['Andrew', 'Jen', 'Mike'],
+    guestList: ['Fabian', 'Jen', 'Mike'],
     printGuestList() {
         console.log('Guest list for ' + this.name)
         
