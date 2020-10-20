@@ -49,8 +49,18 @@ const loadNotes = () => {
     }
 }
 
+const listNotes = () => {
+    const notes = loadNotes()
+    console.log(chalk.bold.blue('Your notes\n'))
+    for (let i = 0; i < notes.length; i++) {
+        const element = notes[i];
+        console.log(element.title)
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
-    removeNote: removeNote
+    removeNote: removeNote,
+    listNotes: listNotes
 }
