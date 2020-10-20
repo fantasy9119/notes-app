@@ -6,7 +6,8 @@ const addNote = (title, body) => {
     const notes = loadNotes()
     //const duplicateNotes = notes.filter((note) => note.title === title)
     const duplicateNote = notes.find((note) => note.title === title)
-    console.log(duplicateNote)
+   
+    debugger
 
     if (!duplicateNote) {
         notes.push({
@@ -36,6 +37,7 @@ const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
     fs.writeFileSync('notes.json', dataJSON)
 }
+
 
 const loadNotes = () => {
     try {
